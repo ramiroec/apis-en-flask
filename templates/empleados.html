@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Empleados</h1>
+    <table>
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Salario</th>
+            <!-- Agrega más columnas según tu esquema de base de datos -->
+        </tr>
+        {% for empleado in empleados %}
+            <tr>
+                <td>{{ empleado.apellido }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.salario }}</td>
+                <!-- Agrega más celdas según tu esquema de base de datos -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
